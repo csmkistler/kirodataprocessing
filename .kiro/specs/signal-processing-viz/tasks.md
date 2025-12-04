@@ -253,7 +253,7 @@
     - **Validates: Requirements 6.3**
 
 - [ ] 13. Implement Windows deployment scripts
-  - [ ] 13.1 Create PowerShell startup script
+  - [x] 13.1 Create PowerShell startup script
     - Check for .NET 10 SDK installation
     - Check for MongoDB service and start if needed
     - Start backend server with dotnet run
@@ -261,12 +261,12 @@
     - Open browser to http://localhost:5000
     - _Requirements: 7.1, 7.2, 7.3, 7.4_
 
-  - [ ] 13.2 Create batch file startup script
+  - [x] 13.2 Create batch file startup script
     - Implement same functionality as PowerShell script for cmd.exe
     - Add error handling for missing dependencies
     - _Requirements: 7.1, 7.2, 7.3_
 
-  - [ ] 13.3 Configure production build
+  - [x] 13.3 Configure production build
     - Set up frontend build process outputting to wwwroot
     - Configure backend to serve static files
     - Set up MongoDB data directory in user AppData

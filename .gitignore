@@ -1,0 +1,70 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.dll
+*.exe
+*.pdb
+*.log
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.vsidx
+*.vspscc
+*.vspx
+*.sap
+
+# Frontend
+node_modules/
+dist/
+.vite/
+*.local
+
+# Frontend build output (served by backend)
+src/SignalProcessing.Api/wwwroot/
+
+# Logs
+*.log
+server-output.log
+server-error.log
+
+# Database
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test results
+TestResults/
+coverage/
+*.trx
+*.coverage

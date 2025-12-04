@@ -81,12 +81,21 @@ app.UseExceptionHandler();
 app.UseCors("LocalDevelopment");
 // Disable HTTPS redirection for local development
 // app.UseHttpsRedirection();
+
+// Serve static files from wwwroot
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.UseAuthorization();
 app.MapControllers();
+
+// Fallback to index.html for client-side routing
+app.MapFallbackToFile("index.html");
 
 Console.WriteLine("🚀 Signal Processing API is running!");
 Console.WriteLine("📍 API: http://localhost:5000");
 Console.WriteLine("📚 Swagger: http://localhost:5000/swagger");
 Console.WriteLine("💚 Health: http://localhost:5000/api/health");
+Console.WriteLine("🌐 Frontend: http://localhost:5000");
 
 app.Run();
