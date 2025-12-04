@@ -155,23 +155,23 @@
 - [x] 8. Checkpoint - Ensure backend tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 9. Implement React frontend structure
-  - [ ] 9.1 Set up React project with TypeScript and Vite
+- [x] 9. Implement React frontend structure
+  - [x] 9.1 Set up React project with TypeScript and Vite
     - Initialize Vite project with React and TypeScript template
     - Install dependencies (recharts, axios, react-hook-form)
     - Configure Vite proxy for API calls to backend
     - Set up basic App component structure
     - _Requirements: 3.1, 7.1, 7.4_
 
-  - [ ] 9.2 Create API service layer
+  - [x] 9.2 Create API service layer
     - Implement api.ts with axios client
     - Add methods for signal generation, processing, and trigger operations
     - Add TypeScript interfaces for request/response types
     - Implement error handling and response parsing
     - _Requirements: 1.1, 2.1, 5.1_
 
-- [ ] 10. Implement Visualization Component
-  - [ ] 10.1 Create SignalChart component
+- [x] 10. Implement Visualization Component
+  - [x] 10.1 Create SignalChart component
     - Implement chart using Recharts LineChart
     - Display time on x-axis and amplitude on y-axis
     - Support rendering both original and processed signals
@@ -179,67 +179,67 @@
     - Implement downsampling for large datasets (>10,000 points)
     - _Requirements: 3.1, 3.2, 3.3, 3.5_
 
-  - [ ] 10.2 Write property test for chart rendering
+  - [x] 10.2 Write property test for chart rendering
     - **Property 5: Chart renders signal data**
     - **Validates: Requirements 3.1**
 
-  - [ ] 10.3 Create ParameterPanel component
+  - [x] 10.3 Create ParameterPanel component
     - Add form inputs for signal type, frequency, amplitude, phase, duration, sample rate
     - Implement real-time validation with error messages
     - Add "Generate Signal" button triggering API call
     - Display loading state during generation
     - _Requirements: 1.1, 1.4, 1.5, 4.1, 4.2_
 
-  - [ ] 10.4 Write property test for parameter validation feedback
+  - [x] 10.4 Write property test for parameter validation feedback
     - **Property 6: Parameter validation feedback**
     - **Validates: Requirements 4.2**
 
-  - [ ] 10.5 Write property test for invalid parameter prevention
+  - [x] 10.5 Write property test for invalid parameter prevention
     - **Property 8: Invalid parameter prevention**
     - **Validates: Requirements 4.5**
 
-  - [ ] 10.6 Create ProcessingPanel component
+  - [x] 10.6 Create ProcessingPanel component
     - Add dropdown for selecting processing operation type
     - Add conditional inputs based on operation (cutoff frequency, gain, etc.)
     - Implement validation for processing parameters
     - Add "Apply Processing" button triggering API call
     - _Requirements: 2.1, 2.5, 4.1, 4.3, 4.4_
 
-  - [ ] 10.7 Write property test for parameter application
+  - [x] 10.7 Write property test for parameter application
     - **Property 7: Parameter application triggers processing**
     - **Validates: Requirements 4.3**
 
-  - [ ] 10.8 Create SignalSelector component
+  - [x] 10.8 Create SignalSelector component
     - Add dropdown listing recent signals from database
     - Implement signal selection triggering chart update
     - Display signal metadata (type, frequency, creation time)
     - _Requirements: 6.3_
 
-- [ ] 11. Implement Trigger UI components
-  - [ ] 11.1 Create TriggerInput component
+- [x] 11. Implement Trigger UI components
+  - [x] 11.1 Create TriggerInput component
     - Add numeric input field for entering values
     - Add input field for configuring threshold
     - Add "Check Value" button calling trigger API
     - Display feedback when threshold is exceeded
     - _Requirements: 5.1, 5.2, 5.4_
 
-  - [ ] 11.2 Create EventList component
+  - [x] 11.2 Create EventList component
     - Fetch and display trigger events from API
     - Display events in reverse chronological order
     - Show event value, threshold, and timestamp for each event
     - Implement auto-refresh when new events are triggered
     - _Requirements: 5.3, 5.5_
 
-  - [ ] 11.3 Write property test for event display
+  - [x] 11.3 Write property test for event display
     - **Property 11: Event display**
     - **Validates: Requirements 5.3**
 
-  - [ ] 11.4 Write property test for event ordering
+  - [x] 11.4 Write property test for event ordering
     - **Property 12: Event ordering**
     - **Validates: Requirements 5.5**
 
-- [ ] 12. Implement main App component integration
-  - [ ] 12.1 Wire up all components in App.tsx
+- [x] 12. Implement main App component integration
+  - [x] 12.1 Wire up all components in App.tsx
     - Create state management for signals and processing
     - Connect ParameterPanel to signal generation
     - Connect ProcessingPanel to signal processing
@@ -248,7 +248,7 @@
     - Implement chart update within 100ms of data availability
     - _Requirements: 3.1, 3.2, 3.4_
 
-  - [ ] 12.2 Write property test for query retrieval
+  - [x] 12.2 Write property test for query retrieval
     - **Property 14: Query retrieval**
     - **Validates: Requirements 6.3**
 
