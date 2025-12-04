@@ -103,22 +103,22 @@
     - **Property 10: Event emission on threshold exceeded**
     - **Validates: Requirements 5.2**
 
-- [ ] 6. Implement Application Services layer
-  - [ ] 6.1 Create SignalGenerationService
+- [x] 6. Implement Application Services layer
+  - [x] 6.1 Create SignalGenerationService
     - Implement service orchestrating signal generation and storage
     - Add GenerateSignalAsync method calling ISignalGenerator and ISignalDatabase
     - Add GetSignalAsync and GetRecentSignalsAsync methods
     - Map domain entities to DTOs
     - _Requirements: 1.1, 1.3, 6.1_
 
-  - [ ] 6.2 Create SignalProcessingService
+  - [x] 6.2 Create SignalProcessingService
     - Implement service orchestrating signal processing and storage
     - Add ProcessSignalAsync method calling ISignalProcessor and ISignalDatabase
     - Ensure original signal is preserved during processing
     - Map processed signals to DTOs
     - _Requirements: 2.1, 2.3, 2.4_
 
-  - [ ] 6.3 Create TriggerService
+  - [x] 6.3 Create TriggerService
     - Implement service wrapping ITriggerComponent
     - Add methods for configuring threshold and checking values
     - Add GetEventsAsync method retrieving events from database
