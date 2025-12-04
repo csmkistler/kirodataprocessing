@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "SignalProcessing.Application/1.0.0": {
+        "dependencies": {
+          "SignalProcessing.Core": "1.0.0"
+        },
+        "runtime": {
+          "SignalProcessing.Application.dll": {}
+        }
+      },
+      "SignalProcessing.Core/1.0.0": {
+        "runtime": {
+          "SignalProcessing.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SignalProcessing.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SignalProcessing.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

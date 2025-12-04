@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "J6RGR9I050w=",
+  "success": true,
+  "projectFilePath": "C:\\Source\\kirodataprocessing\\src\\SignalProcessing.Api\\SignalProcessing.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\csm\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0-rc.1.25451.107\\microsoft.aspnetcore.openapi.10.0.0-rc.1.25451.107.nupkg.sha512",
+    "C:\\Users\\csm\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
+    "C:\\Users\\csm\\.nuget\\packages\\microsoft.openapi\\2.3.0\\microsoft.openapi.2.3.0.nupkg.sha512",
+    "C:\\Users\\csm\\.nuget\\packages\\swashbuckle.aspnetcore\\10.0.1\\swashbuckle.aspnetcore.10.0.1.nupkg.sha512",
+    "C:\\Users\\csm\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.0.1\\swashbuckle.aspnetcore.swagger.10.0.1.nupkg.sha512",
+    "C:\\Users\\csm\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.0.1\\swashbuckle.aspnetcore.swaggergen.10.0.1.nupkg.sha512",
+    "C:\\Users\\csm\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.0.1\\swashbuckle.aspnetcore.swaggerui.10.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

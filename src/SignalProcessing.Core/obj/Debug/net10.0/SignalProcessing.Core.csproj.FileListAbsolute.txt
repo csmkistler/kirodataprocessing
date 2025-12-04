@@ -1,0 +1,12 @@
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\bin\Debug\net10.0\SignalProcessing.Core.deps.json
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\bin\Debug\net10.0\SignalProcessing.Core.dll
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\bin\Debug\net10.0\SignalProcessing.Core.pdb
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\obj\Debug\net10.0\SignalProcessing.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\obj\Debug\net10.0\SignalProcessing.Core.AssemblyInfoInputs.cache
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\obj\Debug\net10.0\SignalProcessing.Core.AssemblyInfo.cs
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\obj\Debug\net10.0\SignalProcessing.Core.csproj.CoreCompileInputs.cache
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\obj\Debug\net10.0\SignalProcessing.Core.sourcelink.json
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\obj\Debug\net10.0\SignalProcessing.Core.dll
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\obj\Debug\net10.0\refint\SignalProcessing.Core.dll
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\obj\Debug\net10.0\SignalProcessing.Core.pdb
+C:\Source\kirodataprocessing\src\SignalProcessing.Core\obj\Debug\net10.0\ref\SignalProcessing.Core.dll

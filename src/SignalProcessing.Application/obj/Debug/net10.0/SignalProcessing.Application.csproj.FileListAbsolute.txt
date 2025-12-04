@@ -1,0 +1,16 @@
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\bin\Debug\net10.0\SignalProcessing.Application.deps.json
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\bin\Debug\net10.0\SignalProcessing.Application.dll
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\bin\Debug\net10.0\SignalProcessing.Application.pdb
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\bin\Debug\net10.0\SignalProcessing.Core.dll
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\bin\Debug\net10.0\SignalProcessing.Core.pdb
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\SignalProcessing.Application.csproj.AssemblyReference.cache
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\SignalProcessing.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\SignalProcessing.Application.AssemblyInfoInputs.cache
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\SignalProcessing.Application.AssemblyInfo.cs
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\SignalProcessing.Application.csproj.CoreCompileInputs.cache
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\SignalProcessing.Application.sourcelink.json
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\SignalPr.7E1FEF1E.Up2Date
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\SignalProcessing.Application.dll
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\refint\SignalProcessing.Application.dll
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\SignalProcessing.Application.pdb
+C:\Source\kirodataprocessing\src\SignalProcessing.Application\obj\Debug\net10.0\ref\SignalProcessing.Application.dll

@@ -1,0 +1,6 @@
+@SignalProcessing.Api_HostAddress = http://localhost:5276
+
+GET {{SignalProcessing.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
