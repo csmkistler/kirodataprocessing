@@ -2,11 +2,29 @@ using SignalProcessing.Core.ValueObjects;
 using SignalProcessing.Infrastructure;
 using SignalProcessing.Demo;
 
-// Check if user wants visual demo
-if (args.Length > 0 && args[0] == "--visual")
+// Check command line arguments
+if (args.Length > 0)
 {
-    await VisualDemo.Run();
-    return;
+    if (args[0] == "--visual")
+    {
+        await VisualDemo.Run();
+        return;
+    }
+    else if (args[0] == "--database" || args[0] == "--db")
+    {
+        await DatabaseDemo.RunDemo();
+        return;
+    }
+    else if (args[0] == "--help" || args[0] == "-h")
+    {
+        Console.WriteLine("Signal Processing Demo");
+        Console.WriteLine("\nUsage:");
+        Console.WriteLine("  dotnet run                    Run basic signal generation demo");
+        Console.WriteLine("  dotnet run --visual           Run visual ASCII chart demo");
+        Console.WriteLine("  dotnet run --database         Run database persistence demo");
+        Console.WriteLine("  dotnet run --help             Show this help message");
+        return;
+    }
 }
 
 Console.WriteLine("=== Signal Processing Demo ===\n");

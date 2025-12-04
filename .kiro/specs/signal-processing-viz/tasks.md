@@ -32,33 +32,33 @@
     - **Property 1: Signal generation with parameters**
     - **Validates: Requirements 1.1, 1.3, 1.5**
 
-- [ ] 3. Implement database layer
-  - [ ] 3.1 Set up MongoDB connection and context
+- [x] 3. Implement database layer
+  - [x] 3.1 Set up MongoDB connection and context
     - Create MongoDbContext class with connection management
     - Configure MongoDB connection string in appsettings.json
     - Implement IMetadataDatabase interface with MongoDB driver
     - Create collections for signal_metadata, processed_signal_metadata, trigger_events, app_config
     - _Requirements: 6.1, 6.2, 6.5_
 
-  - [ ] 3.2 Set up InfluxDB connection and context
+  - [x] 3.2 Set up InfluxDB connection and context
     - Create InfluxDbContext class with InfluxDB client
     - Configure InfluxDB connection settings
     - Implement ITimeSeriesDatabase interface
     - Define measurements for signal_samples and processed_signal_samples
     - _Requirements: 6.1, 6.2_
 
-  - [ ] 3.3 Implement unified database interface
+  - [x] 3.3 Implement unified database interface
     - Create SignalDatabase class implementing ISignalDatabase
     - Implement SaveCompleteSignal method coordinating both databases
     - Implement GetCompleteSignal method retrieving from both databases
     - Add batch write operations for efficient sample storage
     - _Requirements: 6.1, 6.2, 6.3_
 
-  - [ ] 3.4 Write property test for signal persistence
+  - [x] 3.4 Write property test for signal persistence
     - **Property 13: Signal persistence with metadata**
     - **Validates: Requirements 6.1, 6.2**
 
-  - [ ] 3.5 Write property test for referential integrity
+  - [x] 3.5 Write property test for referential integrity
     - **Property 15: Referential integrity**
     - **Validates: Requirements 6.4**
 
