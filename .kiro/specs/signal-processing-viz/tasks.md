@@ -152,7 +152,7 @@
     - Add Swagger/OpenAPI documentation
     - _Requirements: 1.4, 2.5_
 
-- [ ] 8. Checkpoint - Ensure backend tests pass
+- [x] 8. Checkpoint - Ensure backend tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 9. Implement React frontend structure

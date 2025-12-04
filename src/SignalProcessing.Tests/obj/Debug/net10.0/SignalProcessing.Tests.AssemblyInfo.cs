@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SignalProcessing.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2dfc9804e56169c8c6f3d23538ac93cf45dc5be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f2895a182ee6c0a579916503ff5760407e7e193")]
 [assembly: System.Reflection.AssemblyProductAttribute("SignalProcessing.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SignalProcessing.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
