@@ -62,18 +62,18 @@
     - **Property 15: Referential integrity**
     - **Validates: Requirements 6.4**
 
-- [ ] 4. Implement Signal Processor component
-  - [ ] 4.1 Create ProcessingParams value object and validation
+- [x] 4. Implement Signal Processor component
+  - [x] 4.1 Create ProcessingParams value object and validation
     - Implement ProcessingParams record with operation type and parameters
     - Add validation for cutoff frequencies, gain, and filter order
     - Validate against Nyquist frequency constraints
     - _Requirements: 2.1, 2.5_
 
-  - [ ] 4.2 Write property test for processing parameter validation
+  - [x] 4.2 Write property test for processing parameter validation
     - **Property 4: Invalid processing parameter rejection**
     - **Validates: Requirements 2.5**
 
-  - [ ] 4.3 Implement signal processing algorithms
+  - [x] 4.3 Implement signal processing algorithms
     - Create SignalProcessor class implementing ISignalProcessor
     - Implement low-pass Butterworth filter
     - Implement high-pass Butterworth filter
@@ -82,7 +82,7 @@
     - Retrieve original signal from database before processing
     - _Requirements: 2.1, 2.2_
 
-  - [ ] 4.4 Write property test for signal processing
+  - [x] 4.4 Write property test for signal processing
     - **Property 3: Signal processing preserves original**
     - **Validates: Requirements 2.1, 2.3, 2.4**
 

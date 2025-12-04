@@ -15,14 +15,26 @@ if (args.Length > 0)
         await DatabaseDemo.RunDemo();
         return;
     }
+    else if (args[0] == "--processor" || args[0] == "--process")
+    {
+        await ProcessorDemo.Run();
+        return;
+    }
+    else if (args[0] == "--processor-visual" || args[0] == "--pv")
+    {
+        await ProcessorVisualDemo.Run();
+        return;
+    }
     else if (args[0] == "--help" || args[0] == "-h")
     {
         Console.WriteLine("Signal Processing Demo");
         Console.WriteLine("\nUsage:");
-        Console.WriteLine("  dotnet run                    Run basic signal generation demo");
-        Console.WriteLine("  dotnet run --visual           Run visual ASCII chart demo");
-        Console.WriteLine("  dotnet run --database         Run database persistence demo");
-        Console.WriteLine("  dotnet run --help             Show this help message");
+        Console.WriteLine("  dotnet run                      Run basic signal generation demo");
+        Console.WriteLine("  dotnet run --visual             Run visual ASCII chart demo");
+        Console.WriteLine("  dotnet run --processor          Run signal processor demo");
+        Console.WriteLine("  dotnet run --processor-visual   Run visual processor demo (before/after)");
+        Console.WriteLine("  dotnet run --database           Run database persistence demo");
+        Console.WriteLine("  dotnet run --help               Show this help message");
         return;
     }
 }
