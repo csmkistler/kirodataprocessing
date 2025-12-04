@@ -144,3 +144,5 @@ C:\Source\kirodataprocessing\src\SignalProcessing.Tests\bin\Debug\net10.0\System
 C:\Source\kirodataprocessing\src\SignalProcessing.Tests\bin\Debug\net10.0\ZstdSharp.dll
 C:\Source\kirodataprocessing\src\SignalProcessing.Tests\bin\Debug\net10.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 C:\Source\kirodataprocessing\src\SignalProcessing.Tests\bin\Debug\net10.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Source\kirodataprocessing\src\SignalProcessing.Tests\bin\Debug\net10.0\Castle.Core.dll
+C:\Source\kirodataprocessing\src\SignalProcessing.Tests\bin\Debug\net10.0\Moq.dll
