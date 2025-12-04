@@ -125,8 +125,8 @@
     - Map trigger events to DTOs
     - _Requirements: 5.1, 5.2, 5.3, 5.5_
 
-- [ ] 7. Implement API Controllers
-  - [ ] 7.1 Create SignalsController
+- [x] 7. Implement API Controllers
+  - [x] 7.1 Create SignalsController
     - Add POST /api/signals/generate endpoint accepting SignalGenerationRequest
     - Add GET /api/signals/{id} endpoint returning SignalDto
     - Add GET /api/signals endpoint with pagination for recent signals
@@ -134,19 +134,19 @@
     - Add XML documentation for Swagger
     - _Requirements: 1.1, 1.4, 6.3_
 
-  - [ ] 7.2 Create ProcessingController
+  - [x] 7.2 Create ProcessingController
     - Add POST /api/processing/process endpoint accepting ProcessingRequest
     - Add GET /api/processing/{id} endpoint returning ProcessedSignalDto
     - Validate processing parameters and return 400 for invalid input
     - _Requirements: 2.1, 2.5_
 
-  - [ ] 7.3 Create TriggersController
+  - [x] 7.3 Create TriggersController
     - Add POST /api/triggers/configure endpoint for setting threshold
     - Add POST /api/triggers/check endpoint accepting input value
     - Add GET /api/triggers/events endpoint returning event list
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
-  - [ ] 7.4 Configure global exception handling and CORS
+  - [x] 7.4 Configure global exception handling and CORS
     - Implement GlobalExceptionHandler for consistent error responses
     - Configure CORS for local development
     - Add Swagger/OpenAPI documentation

@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SignalProcessing.Api</name>
+    </assembly>
+    <members>
+        <member name="M:SignalProcessing.Api.Controllers.HealthController.Get">
+            <summary>
+            Health check endpoint to verify API is running
+            </summary>
+        </member>
+        <member name="T:SignalProcessing.Api.Controllers.ProcessingController">
+            <summary>
+            Controller for signal processing operations.
+            </summary>
+        </member>
+        <member name="M:SignalProcessing.Api.Controllers.ProcessingController.ProcessSignal(SignalProcessing.Api.Models.ProcessingRequest)">
+            <summary>
+            Processes a signal with the specified parameters.
+            </summary>
+            <param name="request">Processing parameters.</param>
+            <returns>The processed signal.</returns>
+            <response code="201">Signal processed successfully.</response>
+            <response code="400">Invalid parameters provided.</response>
+            <response code="404">Original signal not found.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:SignalProcessing.Api.Controllers.ProcessingController.GetProcessedSignal(System.Guid)">
+            <summary>
+            Retrieves a processed signal by its ID.
+            </summary>
+            <param name="id">Processed signal ID.</param>
+            <returns>The processed signal with the specified ID.</returns>
+            <response code="200">Processed signal found and returned.</response>
+            <response code="404">Processed signal not found.</response>
+        </member>
+        <member name="T:SignalProcessing.Api.Controllers.SignalsController">
+            <summary>
+            Controller for signal generation and retrieval operations.
+            </summary>
+        </member>
+        <member name="M:SignalProcessing.Api.Controllers.SignalsController.GenerateSignal(SignalProcessing.Api.Models.SignalGenerationRequest)">
+            <summary>
+            Generates a new signal based on the provided parameters.
+            </summary>
+            <param name="request">Signal generation parameters.</param>
+            <returns>The generated signal.</returns>
+            <response code="201">Signal created successfully.</response>
+            <response code="400">Invalid parameters provided.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:SignalProcessing.Api.Controllers.SignalsController.GetSignal(System.Guid)">
+            <summary>
+            Retrieves a signal by its ID.
+            </summary>
+            <param name="id">Signal ID.</param>
+            <returns>The signal with the specified ID.</returns>
+            <response code="200">Signal found and returned.</response>
+            <response code="404">Signal not found.</response>
+        </member>
+        <member name="M:SignalProcessing.Api.Controllers.SignalsController.GetSignals(System.Int32)">
+            <summary>
+            Retrieves recent signals with pagination.
+            </summary>
+            <param name="limit">Maximum number of signals to retrieve (default: 10, max: 100).</param>
+            <returns>List of recent signals.</returns>
+            <response code="200">Signals retrieved successfully.</response>
+            <response code="400">Invalid pagination parameters.</response>
+        </member>
+        <member name="T:SignalProcessing.Api.Controllers.TriggersController">
+            <summary>
+            Controller for trigger configuration and event management.
+            </summary>
+        </member>
+        <member name="M:SignalProcessing.Api.Controllers.TriggersController.ConfigureThreshold(SignalProcessing.Api.Models.TriggerConfigRequest)">
+            <summary>
+            Configures the trigger threshold.
+            </summary>
+            <param name="request">Trigger configuration parameters.</param>
+            <returns>Success confirmation.</returns>
+            <response code="200">Threshold configured successfully.</response>
+            <response code="400">Invalid parameters provided.</response>
+        </member>
+        <member name="M:SignalProcessing.Api.Controllers.TriggersController.CheckValue(SignalProcessing.Api.Models.TriggerCheckRequest)">
+            <summary>
+            Checks a value against the configured threshold.
+            </summary>
+            <param name="request">Value to check.</param>
+            <returns>Trigger event if threshold was exceeded, null otherwise.</returns>
+            <response code="200">Value checked successfully.</response>
+            <response code="400">Invalid parameters provided.</response>
+        </member>
+        <member name="M:SignalProcessing.Api.Controllers.TriggersController.GetEvents(System.Int32)">
+            <summary>
+            Retrieves recent trigger events.
+            </summary>
+            <param name="limit">Maximum number of events to retrieve (default: 100, max: 1000).</param>
+            <returns>List of trigger events in reverse chronological order.</returns>
+            <response code="200">Events retrieved successfully.</response>
+            <response code="400">Invalid parameters provided.</response>
+        </member>
+        <member name="M:SignalProcessing.Api.Controllers.TriggersController.ClearEvents">
+            <summary>
+            Clears all trigger events.
+            </summary>
+            <returns>Success confirmation.</returns>
+            <response code="200">Events cleared successfully.</response>
+        </member>
+        <member name="T:SignalProcessing.Api.Controllers.TriggerCheckResponse">
+            <summary>
+            Response model for trigger check operation.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Controllers.TriggerCheckResponse.Triggered">
+            <summary>
+            Whether the threshold was exceeded.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Controllers.TriggerCheckResponse.Event">
+            <summary>
+            Trigger event details if threshold was exceeded.
+            </summary>
+        </member>
+        <member name="T:SignalProcessing.Api.Middleware.GlobalExceptionHandler">
+            <summary>
+            Global exception handler for consistent error responses.
+            </summary>
+        </member>
+        <member name="T:SignalProcessing.Api.Models.PaginationParams">
+            <summary>
+            Pagination parameters for list endpoints.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.PaginationParams.Page">
+            <summary>
+            Page number (1-based).
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.PaginationParams.PageSize">
+            <summary>
+            Number of items per page.
+            </summary>
+        </member>
+        <member name="T:SignalProcessing.Api.Models.ProcessingRequest">
+            <summary>
+            Request model for signal processing.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.ProcessingRequest.SignalId">
+            <summary>
+            ID of the signal to process.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.ProcessingRequest.Operation">
+            <summary>
+            Type of processing operation (LowPass, HighPass, BandPass, Gain).
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.ProcessingRequest.CutoffFrequency">
+            <summary>
+            Cutoff frequency in Hz (for LowPass and HighPass filters).
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.ProcessingRequest.LowCutoff">
+            <summary>
+            Low cutoff frequency in Hz (for BandPass filter).
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.ProcessingRequest.HighCutoff">
+            <summary>
+            High cutoff frequency in Hz (for BandPass filter).
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.ProcessingRequest.Gain">
+            <summary>
+            Gain multiplier (for Gain operation).
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.ProcessingRequest.Order">
+            <summary>
+            Filter order (for filter operations).
+            </summary>
+        </member>
+        <member name="T:SignalProcessing.Api.Models.SignalGenerationRequest">
+            <summary>
+            Request model for signal generation.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.SignalGenerationRequest.Type">
+            <summary>
+            Type of signal to generate (Sine, Square, Sawtooth, Noise).
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.SignalGenerationRequest.Frequency">
+            <summary>
+            Frequency in Hz.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.SignalGenerationRequest.Amplitude">
+            <summary>
+            Amplitude in arbitrary units.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.SignalGenerationRequest.Phase">
+            <summary>
+            Phase in radians.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.SignalGenerationRequest.Duration">
+            <summary>
+            Duration in seconds.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.SignalGenerationRequest.SampleRate">
+            <summary>
+            Sample rate in samples per second.
+            </summary>
+        </member>
+        <member name="T:SignalProcessing.Api.Models.TriggerCheckRequest">
+            <summary>
+            Request model for checking a value against the trigger threshold.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.TriggerCheckRequest.Value">
+            <summary>
+            Value to check against the configured threshold.
+            </summary>
+        </member>
+        <member name="T:SignalProcessing.Api.Models.TriggerConfigRequest">
+            <summary>
+            Request model for configuring trigger threshold.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.TriggerConfigRequest.Threshold">
+            <summary>
+            Threshold value for trigger detection.
+            </summary>
+        </member>
+        <member name="P:SignalProcessing.Api.Models.TriggerConfigRequest.Enabled">
+            <summary>
+            Whether the trigger is enabled.
+            </summary>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type)">
+            <summary>
+            Generates a documentation comment ID for a type.
+            Example: T:Namespace.Outer+Inner`1 becomes T:Namespace.Outer.Inner`1
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.PropertyInfo)">
+            <summary>
+            Generates a documentation comment ID for a property.
+            Example: P:Namespace.ContainingType.PropertyName or for an indexer P:Namespace.ContainingType.Item(System.Int32)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type,System.String)">
+            <summary>
+            Generates a documentation comment ID for a property given its container type and property name.
+            Example: P:Namespace.ContainingType.PropertyName
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.MethodInfo)">
+            <summary>
+            Generates a documentation comment ID for a method (or constructor).
+            For example:
+              M:Namespace.ContainingType.MethodName(ParamType1,ParamType2)~ReturnType
+              M:Namespace.ContainingType.#ctor(ParamType)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.GetTypeDocId(System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Generates a documentation ID string for a type.
+            This method handles nested types (replacing '+' with '.'),
+            generic types, arrays, pointers, by-ref types, and generic parameters.
+            The <paramref name="includeGenericArguments"/> flag controls whether
+            constructed generic type arguments are emitted, while <paramref name="omitGenericArity"/>
+            controls whether the generic arity marker (e.g. "`1") is appended.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.NormalizeDocId(System.String)">
+            <summary>
+            Normalizes a documentation comment ID to match the compiler-style format.
+            Strips the return type suffix for ordinary methods but retains it for conversion operators.
+            </summary>
+            <param name="docId">The documentation comment ID to normalize.</param>
+            <returns>The normalized documentation comment ID.</returns>
+        </member>
+    </members>
+</doc>

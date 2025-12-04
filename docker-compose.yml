@@ -1,0 +1,46 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: signal-processing-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=signal_processing
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  influxdb:
+    image: influxdb:2.7
+    container_name: signal-processing-influxdb
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+      - influxdb_config:/etc/influxdb2
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=adminpassword
+      - DOCKER_INFLUXDB_INIT_ORG=signal-processing
+      - DOCKER_INFLUXDB_INIT_BUCKET=signals
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=my-super-secret-auth-token
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8086/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  mongodb_data:
+    driver: local
+  influxdb_data:
+    driver: local
+  influxdb_config:
+    driver: local

@@ -1,3 +1,10 @@
+using System.Reflection;
+using SignalProcessing.Api.Middleware;
+using SignalProcessing.Application.Services;
+using SignalProcessing.Core.Interfaces;
+using SignalProcessing.Infrastructure;
+using SignalProcessing.Infrastructure.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure Kestrel to listen on HTTP only for local development
@@ -9,7 +16,18 @@ builder.WebHost.ConfigureKestrel(options =>
 // Add services to the container
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+// Configure Swagger with XML documentation
+builder.Services.AddSwaggerGen(options =>
+{
+    // Include XML comments for better API documentation
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    if (File.Exists(xmlPath))
+    {
+        options.IncludeXmlComments(xmlPath);
+    }
+});
 
 // Configure CORS for local development
 builder.Services.AddCors(options =>
@@ -23,20 +41,26 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Core services (will be implemented in later tasks)
-// builder.Services.AddScoped<ISignalGenerator, SignalGenerator>();
-// builder.Services.AddScoped<ISignalProcessor, SignalProcessor>();
-// builder.Services.AddScoped<ITriggerComponent, TriggerComponent>();
+// Register global exception handler
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
 
-// Application services (will be implemented in later tasks)
-// builder.Services.AddScoped<SignalGenerationService>();
-// builder.Services.AddScoped<SignalProcessingService>();
-// builder.Services.AddScoped<TriggerService>();
+// Core services
+builder.Services.AddScoped<ISignalGenerator, SignalGenerator>();
+builder.Services.AddScoped<ISignalProcessor, SignalProcessor>();
+builder.Services.AddScoped<ITriggerComponent, TriggerComponent>();
 
-// Infrastructure services (will be implemented in later tasks)
-// builder.Services.AddSingleton<ITimeSeriesDatabase, InfluxDbAdapter>();
-// builder.Services.AddSingleton<IMetadataDatabase, MongoDbAdapter>();
-// builder.Services.AddScoped<ISignalDatabase, SignalDatabase>();
+// Application services
+builder.Services.AddScoped<SignalGenerationService>();
+builder.Services.AddScoped<SignalProcessingService>();
+builder.Services.AddScoped<TriggerService>();
+
+// Infrastructure services - Database
+builder.Services.AddSingleton<MongoDbContext>();
+builder.Services.AddSingleton<InfluxDbContext>();
+builder.Services.AddSingleton<ITimeSeriesDatabase, InfluxTimeSeriesDatabase>();
+builder.Services.AddSingleton<IMetadataDatabase, MongoMetadataDatabase>();
+builder.Services.AddScoped<ISignalDatabase, SignalDatabase>();
 
 var app = builder.Build();
 
@@ -44,8 +68,15 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Signal Processing API v1");
+        options.RoutePrefix = "swagger";
+    });
 }
+
+// Use exception handler
+app.UseExceptionHandler();
 
 app.UseCors("LocalDevelopment");
 // Disable HTTPS redirection for local development
