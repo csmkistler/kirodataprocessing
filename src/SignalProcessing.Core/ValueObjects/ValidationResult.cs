@@ -12,4 +12,10 @@ public class ValidationResult
         IsValid = false,
         Errors = errors.ToList()
     };
+
+    public void AddError(string error)
+    {
+        IsValid = false;
+        Errors.Add(error);
+    }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SignalProcessing.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abaf33bbdeb7416167fee6aa831dc7f3003e70fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d242be41b6b01ffcad6f81bb738cd8467ca3ee88")]
 [assembly: System.Reflection.AssemblyProductAttribute("SignalProcessing.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SignalProcessing.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

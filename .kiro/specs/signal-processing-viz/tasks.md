@@ -8,18 +8,18 @@
   - Configure dependency injection in Program.cs
   - _Requirements: 8.1, 8.2, 8.3, 8.4, 8.5_
 
-- [ ] 2. Implement Signal Generator component
-  - [ ] 2.1 Create SignalGeneratorParams value object and validation logic
+- [x] 2. Implement Signal Generator component
+  - [x] 2.1 Create SignalGeneratorParams value object and validation logic
     - Implement SignalGeneratorParams record with all required fields
     - Add validation for frequency, amplitude, phase, duration, and sample rate
     - Implement ValidationResult class for error reporting
     - _Requirements: 1.1, 1.4, 1.5_
 
-  - [ ] 2.2 Write property test for parameter validation
+  - [x] 2.2 Write property test for parameter validation
     - **Property 2: Invalid parameter rejection**
     - **Validates: Requirements 1.4**
 
-  - [ ] 2.3 Implement signal generation algorithms for all signal types
+  - [x] 2.3 Implement signal generation algorithms for all signal types
     - Create SignalGenerator class implementing ISignalGenerator
     - Implement sine wave generation using Math.Sin
     - Implement square wave generation
@@ -28,7 +28,7 @@
     - Generate samples and timestamps arrays based on duration and sample rate
     - _Requirements: 1.1, 1.2, 1.5_
 
-  - [ ] 2.4 Write property test for signal generation
+  - [x] 2.4 Write property test for signal generation
     - **Property 1: Signal generation with parameters**
     - **Validates: Requirements 1.1, 1.3, 1.5**
 
